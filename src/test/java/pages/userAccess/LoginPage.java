@@ -15,17 +15,58 @@ public class LoginPage extends pages.BasePage {
     @FindBy(id="email-address")
     private WebElement emailTextBox;
 
+    @FindBy(id="password")
+    private WebElement passwordTextBox;
+
+    @FindBy(xpath = "//input[@type='submit']")
+    public WebElement continueBtn;
+
+    @FindBy(xpath = "//a[@href='/reset']")
+    public WebElement linkForgottenYourPassword;
+
+    @FindBy(xpath = "//a[@href='/signup/request']")
+    public WebElement linkCreateAccount;
+
+
     public LoginPage(WebDriver driver) {
         super(driver);
     }
 
-    public void goTo(WebDriver driver) {
+    public void goTo() {
         driver.get(url);
         assertTrue(emailTextBox.isDisplayed());
     }
 
-    public boolean correctPageTitle(WebDriver driver) {
+    public boolean correctPageTitle() {
         return driver.getTitle().equals(pageTitle);
+    }
+
+    public void enterEmail(String emailAddress) {
+        emailTextBox.clear();
+        emailTextBox.sendKeys(emailAddress);
+    }
+
+    public void enterPassword(String password) {
+        passwordTextBox.clear();
+        passwordTextBox.sendKeys(password);
+    }
+
+    public void clickContinue() {
+        continueBtn.click();
+    }
+
+    public void loginWithCredentials(String emailAddress, String password) {
+        enterEmail(emailAddress);
+        enterPassword(password);
+        clickContinue();
+    }
+
+    public void clickCreateAccount() {
+        linkCreateAccount.click();
+    }
+
+    public void clickForgottenYourPassword() {
+        linkForgottenYourPassword.click();
     }
 
 }
