@@ -8,12 +8,14 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import pages.userAccess.LoginPage;
+import utilities.Users;
 
 import java.time.Duration;
 
 public class BaseTest {
 
     public WebDriver driver;
+    public Users users = new Users();
 
 
     @BeforeMethod (alwaysRun = true)

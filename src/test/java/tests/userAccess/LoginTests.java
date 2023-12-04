@@ -1,6 +1,5 @@
 package tests.userAccess;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.nonAdmin.HomePage;
 import pages.userAccess.CreateAccountPage;
@@ -8,7 +7,6 @@ import pages.userAccess.ForgottenYourPasswordPage;
 import pages.userAccess.LoginPage;
 import tests.BaseTest;
 
-import java.time.Duration;
 
 import static org.testng.Assert.*;
 
@@ -25,7 +23,7 @@ public class LoginTests extends BaseTest {
     public void ac2_1_3_LogOnWithValidEmailAddressAndPassword() {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.goTo();
-        loginPage.loginWithCredentials("AutoUser@cabinetoffice.gov.uk", "Password123");
+        loginPage.loginWithCredentials(users.getNonAdminUsername(), users.getNonAdminUserPassword());
         HomePage homePage = new HomePage(driver);
         assertTrue(homePage.correctPageTitle());
     }
@@ -52,7 +50,7 @@ public class LoginTests extends BaseTest {
     public void ac3_2_1_SignOut() {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.goTo();
-        loginPage.loginWithCredentials("AutoUser@cabinetoffice.gov.uk", "Password123");
+        loginPage.loginWithCredentials(users.getNonAdminUsername(), users.getNonAdminUserPassword());
         HomePage homePage = new HomePage(driver);
         homePage.clickSignOut();
         assertTrue(loginPage.correctPageTitle());
