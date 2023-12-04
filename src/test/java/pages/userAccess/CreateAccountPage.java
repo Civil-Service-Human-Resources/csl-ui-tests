@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 public class CreateAccountPage extends pages.BasePage {
 
-    private String url = configReader.getIdentityBaseUrl() + "signup/request";
+    private String url = identityBaseUrl + "signup/request";
     private String pageTitle = "Create an account - Civil Service Learning";
 
 

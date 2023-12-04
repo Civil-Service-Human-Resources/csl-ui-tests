@@ -9,7 +9,7 @@ import static org.testng.Assert.assertTrue;
 
 public class LoginPage extends pages.BasePage {
 
-    private String url = configReader.getIdentityBaseUrl() + "login";
+    private String url = identityBaseUrl + "login";
     private String pageTitle = "Sign in - Civil Service Learning";
 
     @FindBy(id="email-address")
