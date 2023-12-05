@@ -2,7 +2,6 @@ package tests.userAccess;
 
 import org.testng.annotations.Test;
 import pages.userAccess.CreateAccountPage;
-import pages.userAccess.LoginPage;
 import tests.BaseTest;
 
 import static org.testng.Assert.assertTrue;
