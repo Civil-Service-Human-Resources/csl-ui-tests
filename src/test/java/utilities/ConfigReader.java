@@ -39,6 +39,12 @@ public class ConfigReader {
         else throw new RuntimeException("baseUrl not specified in config.properties file");
     }
 
+    public String getBrowser() {
+        String browser = properties.getProperty("browser");
+        if(browser != null) return browser;
+        else throw new RuntimeException("browser not specified in config.properties file");
+    }
+
     public String getNonAdminUsername() {
         String nonAdminUsername = properties.getProperty("nonAdminUsername");
         if(nonAdminUsername != null) return nonAdminUsername;
