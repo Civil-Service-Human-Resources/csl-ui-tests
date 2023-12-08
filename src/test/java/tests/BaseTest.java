@@ -13,14 +13,24 @@ public class BaseTest {
     public Users users = new Users();
     public Browser browser = new Browser();
 
+    private String originalHandle;
+
 
     @BeforeClass (alwaysRun = true)
     public void setUp() {
         driver = browser.createDriver();
+        originalHandle = driver.getWindowHandle();
     }
 
     @BeforeMethod (alwaysRun = true)
     public void clearHistory() {
+        for(String handle : driver.getWindowHandles()) {
+            if (!handle.equals(originalHandle)) {
+                driver.switchTo().window(handle);
+                driver.close();
+            }
+        }
+        driver.switchTo().window(originalHandle);
         driver.manage().deleteAllCookies();
     }
 
