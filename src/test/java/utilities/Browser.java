@@ -59,11 +59,7 @@ public class Browser {
     }
 
     private void createSafariBrowser() {
-        SafariOptions options = new SafariOptions();
-        WebDriverManager.safaridriver().clearDriverCache().setup();
-        WebDriverManager.safaridriver().setup();
-        //options.addArguments("--remote-allow-origins=*");
-        driver = new SafariDriver(options);
+        driver = new SafariDriver();
         driver.manage().window().maximize();
         restoreDefaultBrowserWaitTime();
     }
