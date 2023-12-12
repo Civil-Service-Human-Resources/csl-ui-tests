@@ -3,6 +3,7 @@ package pages.navigation;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Reporter;
 import pages.BasePage;
 
 public class AdminMenuNavigationPage extends BasePage {
@@ -41,69 +42,110 @@ public class AdminMenuNavigationPage extends BasePage {
 
     public void clickHomeLinkFromAdmin() {
         linkHomeFromAdmin.click();
+        Reporter.log("Clicked Home link");
     }
 
     public void clickHomeLinkFromReporting() {
         linkHomeFromReporting.click();
+        Reporter.log("Clicked Home link");
     }
 
     public boolean isAtHomePage() {
-        return driver.getTitle().equals("Your learning – Civil Service Learning");
+        boolean equals = driver.getTitle().equals("Your learning – Civil Service Learning");
+        if (equals) {
+            Reporter.log("Loaded Home page");
+        }
+        return equals;
     }
 
     public void clickSuggestionsForYouLink() {
         linkSuggestionsForYou.click();
+        Reporter.log("Clicked Suggestions For You link");
     }
 
     public boolean isAtSuggestionsForYouPage() {
-        return driver.getTitle().equals("Suggestions for you – Civil Service Learning");
+        boolean equals = driver.getTitle().equals("Suggestions for you – Civil Service Learning");
+        if (equals) {
+            Reporter.log("Loaded Suggestions For You page");
+        }
+        return equals;
     }
 
     public void clickLearningRecordLink() {
         linkLearningRecord.click();
+        Reporter.log("Clicked Learning Record link");
     }
 
     public boolean isAtLearningRecordPage() {
-        return driver.getTitle().equals("Learning record – Civil Service Learning");
+        boolean equals = driver.getTitle().equals("Learning record – Civil Service Learning");
+        if (equals) {
+            Reporter.log("Loaded Learning Record page");
+        }
+        return equals;
     }
 
     public void clickProfileLink() {
         linkProfile.click();
+        Reporter.log("Clicked Profile link");
     }
 
     public boolean isAtProfilePage() {
-        return driver.getTitle().equals("Your profile – Civil Service Learning");
+        boolean equals = driver.getTitle().equals("Your profile – Civil Service Learning");
+        if (equals) {
+            Reporter.log("Loaded Profile page");
+        }
+        return equals;
     }
 
     public void clickSkillsLink() {
         linkSkills.click();
+        Reporter.log("Clicked Skills link");
     }
 
     public boolean isAtSkillsPage() {
-        return driver.getTitle().equals("Skills – Civil Service Learning");
+        boolean equals = driver.getTitle().equals("Skills – Civil Service Learning");
+        if (equals) {
+            Reporter.log("Loaded Skills page");
+        }
+        return equals;
     }
 
     public void clickAdminLink() {
         linkAdmin.click();
+        Reporter.log("Clicked Admin link");
     }
 
     public boolean isAtAdminPage() {
-        return driver.getTitle().equals("Content management - Civil Service Learning");
+        boolean equals = driver.getTitle().equals("Content management - Civil Service Learning");
+        if (equals) {
+            Reporter.log("Loaded Admin page");
+        }
+        return equals;
     }
 
     public void clickReportingLink() {
         linkReporting.click();
+        Reporter.log("Clicked Reporting link");
     }
 
     public boolean isAtReportingPage() {
-        return driver.getTitle().equals("Reporting - Civil Service Learning");
+        boolean equals = driver.getTitle().equals("Reporting - Civil Service Learning");
+        if (equals) {
+            Reporter.log("Loaded Reporting page");
+        }
+        return equals;
     }
 
     public void clickSignOutLink() {
         linkSignOut.click();
+        Reporter.log("Clicked Sign Out link");
     }
 
     public boolean isAtLoginPage() {
-        return driver.getTitle().equals("Sign in - Civil Service Learning");
+        boolean equals = driver.getTitle().equals("Sign in - Civil Service Learning");
+        if (equals) {
+            Reporter.log("Loaded Sign In page");
+        }
+        return equals;
     }
 }

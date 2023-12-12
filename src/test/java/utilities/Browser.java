@@ -11,6 +11,7 @@ import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.safari.SafariOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.Wait;
+import org.testng.Reporter;
 
 import java.time.Duration;
 
@@ -38,6 +39,7 @@ public class Browser {
             default:
                 createChromeBrowser();
         }
+        Reporter.log(browserType + " browser created");
         return driver;
     }
 
@@ -69,6 +71,7 @@ public class Browser {
 
     public void closeDriver () {
         driver.quit();
+        Reporter.log(" Closed browser");
     }
 
     public void restoreDefaultBrowserWaitTime() {
