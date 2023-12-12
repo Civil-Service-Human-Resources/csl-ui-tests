@@ -2,12 +2,15 @@ package utilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.safari.SafariOptions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.Wait;
 
 import java.time.Duration;
 
@@ -74,6 +77,12 @@ public class Browser {
 
     public void setCustomBrowserWaitTime(Integer seconds) {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(seconds));
+    }
+
+    public static void waitFor(WebDriver driver, Integer seconds, WebElement element) {
+        System.out.println(driver.manage().timeouts().getImplicitWaitTimeout().toMillis());
+        Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
+        wait.until(d -> element.isDisplayed());
     }
 
 }

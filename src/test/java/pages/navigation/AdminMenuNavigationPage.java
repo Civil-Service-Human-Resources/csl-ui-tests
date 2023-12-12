@@ -7,7 +7,10 @@ import pages.BasePage;
 
 public class AdminMenuNavigationPage extends BasePage {
     @FindBy(xpath = "/html/body/div/div[2]/div/nav/a[1]")
-    public WebElement linkHome;
+    public WebElement linkHomeFromAdmin;
+
+    @FindBy(xpath = "/html/body/div/div/div/nav/a[1]")
+    public WebElement linkHomeFromReporting;
 
     @FindBy(xpath = "//a[contains(@href, 'you')]")
     public WebElement linkSuggestionsForYou;
@@ -30,14 +33,18 @@ public class AdminMenuNavigationPage extends BasePage {
     @FindBy(xpath = "//a[contains(@href, 'out')]")
     public WebElement linkSignOut;
 
-    
+
 
     public AdminMenuNavigationPage(WebDriver driver) {
         super(driver);
     }
 
-    public void clickHomeLink() {
-        linkHome.click();
+    public void clickHomeLinkFromAdmin() {
+        linkHomeFromAdmin.click();
+    }
+
+    public void clickHomeLinkFromReporting() {
+        linkHomeFromReporting.click();
     }
 
     public boolean isAtHomePage() {
@@ -81,7 +88,7 @@ public class AdminMenuNavigationPage extends BasePage {
     }
 
     public boolean isAtAdminPage() {
-        return driver.getTitle().equals("Content management – Civil Service Learning");
+        return driver.getTitle().equals("Content management - Civil Service Learning");
     }
 
     public void clickReportingLink() {
@@ -89,7 +96,7 @@ public class AdminMenuNavigationPage extends BasePage {
     }
 
     public boolean isAtReportingPage() {
-        return driver.getTitle().equals("Reporting – Civil Service Learning");
+        return driver.getTitle().equals("Reporting - Civil Service Learning");
     }
 
     public void clickSignOutLink() {
@@ -97,6 +104,6 @@ public class AdminMenuNavigationPage extends BasePage {
     }
 
     public boolean isAtLoginPage() {
-        return driver.getTitle().equals("Sign in – Civil Service Learning");
+        return driver.getTitle().equals("Sign in - Civil Service Learning");
     }
 }

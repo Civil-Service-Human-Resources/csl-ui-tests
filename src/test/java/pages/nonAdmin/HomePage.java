@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import pages.BasePage;
 
 public class HomePage extends pages.BasePage {
-    private String url = "https://performance.learn.civilservice.gov.uk/home";
+    private String url = baseUrl + "home";
     private String pageTitle = "Your learning – Civil Service Learning";
 
     @FindBy(xpath = "//a[@href='/sign-out']")

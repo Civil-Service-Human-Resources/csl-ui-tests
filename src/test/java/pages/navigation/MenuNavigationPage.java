@@ -1,11 +1,13 @@
 package pages.navigation;
 
-import java.util.*;
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pages.BasePage;
+import utilities.Browser;
 
 public class MenuNavigationPage extends BasePage {
     @FindBy(xpath = "//a[@href='/home']")
@@ -28,6 +30,12 @@ public class MenuNavigationPage extends BasePage {
 
     @FindBy(xpath = "//a[contains(@href, 'out')]")
     public WebElement linkSignOut;
+
+    @FindBy(xpath = "//a[contains(@href, 'visibility')]")
+    public WebElement linkAddNewCourse;
+
+    @FindBy(xpath = "//a[@href='/reporting']")
+    public WebElement linkReporting;
     
 
     public MenuNavigationPage(WebDriver driver) {
@@ -76,10 +84,11 @@ public class MenuNavigationPage extends BasePage {
 
     public void clickAdminLink() {
         linkAdmin.click();
+        //Browser.waitFor(driver, 120, linkAddNewCourse);
     }
 
     public boolean isAtAdminPage() {
-        return driver.getTitle().equals("Content management – Civil Service Learning");
+        return driver.getTitle().equals("Content management - Civil Service Learning");
     }
 
     public void clickSignOutLink() {
