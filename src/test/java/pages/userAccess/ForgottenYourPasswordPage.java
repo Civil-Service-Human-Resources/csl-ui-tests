@@ -3,6 +3,8 @@ package pages.userAccess;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Reporter;
+
 import static org.testng.Assert.assertTrue;
 
 public class ForgottenYourPasswordPage extends pages.BasePage {
@@ -26,18 +28,25 @@ public class ForgottenYourPasswordPage extends pages.BasePage {
     public void goTo() {
         driver.get(url);
         assertTrue(inputEmail.isDisplayed());
+        Reporter.log("Forgotten Your Password page loaded");
     }
     public boolean correctPageTitle() {
-        return driver.getTitle().equals(pageTitle);
+        boolean equals = driver.getTitle().equals(pageTitle);
+        if (equals) {
+            Reporter.log("Forgotten Your Password page loaded correctly");
+        }
+        return equals;
     }
     
     public void inputEmailAddress(String email) {
         inputEmail.clear();
         inputEmail.sendKeys(email);
+        Reporter.log("Input Email Address");
     }
 
     public void clickContinue() {
         inputContinue.click();
+        Reporter.log("Clicked Continue button");
     }
 
     public void inputEmailAndContinue(String email) {
@@ -48,6 +57,9 @@ public class ForgottenYourPasswordPage extends pages.BasePage {
     public boolean emailValidationDisplayed() {
         boolean isDisplayed = fieldValidation.isDisplayed();
         boolean correctValidation = inputEmail.getAttribute("validationMessage").contains("Please include an '@' in the email address.");
+        if (isDisplayed && correctValidation) {
+            Reporter.log("Invalid Email Address message showing");
+        }
         return isDisplayed && correctValidation;
     }
 }
