@@ -2,7 +2,6 @@ package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-import utilities.Browser;
 import utilities.ConfigReader;
 
 public class BasePage {

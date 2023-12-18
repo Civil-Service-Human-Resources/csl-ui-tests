@@ -5,8 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Reporter;
 
-import java.util.Objects;
-
 import static org.testng.Assert.assertTrue;
 
 public class CreateAccountPage extends pages.BasePage {

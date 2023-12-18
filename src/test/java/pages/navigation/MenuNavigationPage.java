@@ -8,7 +8,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Reporter;
 import pages.BasePage;
-import utilities.Browser;
 
 public class MenuNavigationPage extends BasePage {
     @FindBy(xpath = "//a[@href='/home']")

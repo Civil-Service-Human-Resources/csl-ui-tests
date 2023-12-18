@@ -37,7 +37,7 @@ public class Browser {
                 createSafariBrowser();
                 break;
             default:
-                createChromeBrowser();
+                throw new RuntimeException("Browser not correctly specified in config.properties file");
         }
         Reporter.log(browserType + " browser created");
         return driver;
