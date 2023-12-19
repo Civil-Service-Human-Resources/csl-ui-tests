@@ -50,7 +50,7 @@ public class MenuNavigationPage extends BasePage {
     public boolean isAtHomePage() {
         boolean equals = driver.getTitle().equals("Your learning – Civil Service Learning");
         if (equals) {
-            Reporter.log("Loaded Home page");
+            Reporter.log("Loaded Home page correctly");
         }
         return equals;
     }
@@ -63,7 +63,7 @@ public class MenuNavigationPage extends BasePage {
     public boolean isAtSuggestionsForYouPage() {
         boolean equals = driver.getTitle().equals("Suggestions for you – Civil Service Learning");
         if (equals) {
-            Reporter.log("Loaded Suggestions For You page");
+            Reporter.log("Loaded Suggestions For You page correctly");
         }
         return equals;
     }
@@ -76,7 +76,7 @@ public class MenuNavigationPage extends BasePage {
     public boolean isAtLearningRecordPage() {
         boolean equals = driver.getTitle().equals("Learning record – Civil Service Learning");
         if (equals) {
-            Reporter.log("Loaded Learning Record page");
+            Reporter.log("Loaded Learning Record page correctly");
         }
         return equals;
     }
@@ -89,7 +89,7 @@ public class MenuNavigationPage extends BasePage {
     public boolean isAtProfilePage() {
         boolean equals = driver.getTitle().equals("Your profile – Civil Service Learning");
         if (equals) {
-            Reporter.log("Loaded Profile page");
+            Reporter.log("Loaded Profile page correctly");
         }
         return equals;
     }
@@ -102,7 +102,7 @@ public class MenuNavigationPage extends BasePage {
     public boolean isAtSkillsPage() {
         boolean equals = driver.getTitle().equals("Skills – Civil Service Learning");
         if (equals) {
-            Reporter.log("Loaded Skills page");
+            Reporter.log("Loaded Skills page correctly");
         }
         return equals;
     }
@@ -115,7 +115,7 @@ public class MenuNavigationPage extends BasePage {
     public boolean isAtAdminPage() {
         boolean equals = driver.getTitle().equals("Content management - Civil Service Learning");
         if (equals) {
-            Reporter.log("Loaded Admin page");
+            Reporter.log("Loaded Admin page correctly");
         }
         return equals;
     }
@@ -128,7 +128,7 @@ public class MenuNavigationPage extends BasePage {
     public boolean isAtLoginPage() {
         boolean equals = driver.getTitle().equals("Sign in - Civil Service Learning");
         if (equals) {
-            Reporter.log("Loaded Login page");
+            Reporter.log("Loaded Login page correctly");
         }
         return equals;
     }

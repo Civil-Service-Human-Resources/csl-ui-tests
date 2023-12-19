@@ -58,7 +58,7 @@ public class HeaderFootersPage extends BasePage {
     public boolean isAtCookiesPage() {
         boolean equals = driver.getTitle().equals("Cookies – Civil Service Learning");
         if (equals) {
-            Reporter.log("Loaded Cookies page");
+            Reporter.log("Loaded Cookies page correctly");
         }
         return equals;
     }
@@ -71,7 +71,7 @@ public class HeaderFootersPage extends BasePage {
     public boolean isAtGovUkPage() {
         boolean equals = driver.getTitle().equals("Welcome to GOV.UK");
         if (equals) {
-            Reporter.log("Loaded GOV.UK page");
+            Reporter.log("Loaded GOV.UK page correctly");
         }
         return equals;
     }
@@ -84,7 +84,7 @@ public class HeaderFootersPage extends BasePage {
     public boolean isAtCslHomePage() {
         boolean equals = driver.getTitle().equals("Your learning – Civil Service Learning");
         if (equals) {
-            Reporter.log("Loaded Home page");
+            Reporter.log("Loaded Home page correctly");
         }
         return equals;
     }
@@ -106,7 +106,7 @@ public class HeaderFootersPage extends BasePage {
     public boolean isAtFeedbackPage() {
         boolean equals = driver.getTitle().equals("Qualtrics Survey | Qualtrics Experience Management");
         if (equals) {
-            Reporter.log("Loaded Feedback page");
+            Reporter.log("Loaded Feedback page correctly");
         }
         return equals;
     }
@@ -124,7 +124,7 @@ public class HeaderFootersPage extends BasePage {
     public boolean isAtPrivacyPage() {
         boolean equals = driver.getTitle().equals("Privacy – Civil Service Learning");
         if (equals) {
-            Reporter.log("Loaded Privacy page");
+            Reporter.log("Loaded Privacy page correctly");
         }
         return equals;
     }
@@ -137,7 +137,7 @@ public class HeaderFootersPage extends BasePage {
     public boolean isAtContactUsPage() {
         boolean equals = driver.getTitle().equals("Contact us – Civil Service Learning");
         if (equals) {
-            Reporter.log("Loaded Contact Us page");
+            Reporter.log("Loaded Contact Us page correctly");
         }
         return equals;
     }
@@ -150,7 +150,7 @@ public class HeaderFootersPage extends BasePage {
     public boolean isAtAccessibilityStatementPage() {
         boolean equals = driver.getTitle().equals("Accessibility – Civil Service Learning");
         if (equals) {
-            Reporter.log("Loaded Accessibility page");
+            Reporter.log("Loaded Accessibility page correctly");
         }
         return equals;
     }
@@ -168,7 +168,7 @@ public class HeaderFootersPage extends BasePage {
     public boolean isAtOpenGovernmentLicencePage() {
         boolean equals = driver.getTitle().equals("Open Government Licence");
         if (equals) {
-            Reporter.log("Loaded Open Government Licence page");
+            Reporter.log("Loaded Open Government Licence page correctly");
         }
         return equals;
     }
@@ -181,7 +181,7 @@ public class HeaderFootersPage extends BasePage {
     public boolean isAtCrownCopyrightPage() {
         boolean equals = driver.getTitle().equals("Crown copyright - Re-using PSI");
         if (equals) {
-            Reporter.log("Loaded Crown Copyright page");
+            Reporter.log("Loaded Crown Copyright page correctly");
         }
         return equals;
     }

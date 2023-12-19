@@ -28,7 +28,7 @@ public class ForgottenYourPasswordPage extends pages.BasePage {
     public void goTo() {
         driver.get(url);
         assertTrue(inputEmail.isDisplayed());
-        Reporter.log("Forgotten Your Password page loaded");
+        Reporter.log("Navigated to Forgotten Your Password page");
     }
     public boolean correctPageTitle() {
         boolean equals = driver.getTitle().equals(pageTitle);

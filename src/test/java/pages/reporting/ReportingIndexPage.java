@@ -64,7 +64,7 @@ public class ReportingIndexPage extends BasePage {
     public void goTo() {
         driver.get(url);
         assertTrue(inputBookingStartDay.isDisplayed());
-        Reporter.log("Reporting page loaded");
+        Reporter.log("Navigated to Reporting page");
     }
 
     public boolean correctPageTitle() {

@@ -36,7 +36,7 @@ public class LoginPage extends pages.BasePage {
     public void goTo() {
         driver.get(url);
         assertTrue(emailTextBox.isDisplayed());
-        Reporter.log("Login page loaded");
+        Reporter.log("Navigated to Login page");
     }
 
     public boolean correctPageTitle() {

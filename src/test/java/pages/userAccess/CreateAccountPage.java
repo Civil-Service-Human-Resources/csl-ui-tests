@@ -35,7 +35,7 @@ public class CreateAccountPage extends pages.BasePage {
     public void goTo() {
         driver.get(url);
         assertTrue(emailTextBox.isDisplayed());
-        Reporter.log("Loaded Create Account page");
+        Reporter.log("Navigated to Create Account page");
     }
 
     public boolean correctPageTitle() {

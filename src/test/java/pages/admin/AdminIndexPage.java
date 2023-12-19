@@ -34,7 +34,7 @@ public class AdminIndexPage extends BasePage {
     public void goTo() {
         driver.get(url);
         assertTrue(searchBox.isDisplayed());
-        Reporter.log("Admin page loaded");
+        Reporter.log("Navigated to Admin page");
     }
 
     public boolean correctPageTitle() {
