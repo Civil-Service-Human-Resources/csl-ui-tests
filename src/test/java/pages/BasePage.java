@@ -12,6 +12,8 @@ public class BasePage {
     protected String identityBaseUrl;
     protected String baseUrl;
 
+    protected String adminUrl;
+
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
@@ -19,6 +21,7 @@ public class BasePage {
         configReader = new ConfigReader();
         identityBaseUrl = configReader.getIdentityBaseUrl();
         baseUrl = configReader.getBaseUrl();
+        adminUrl = configReader.getAdminURL();
     }
 
 }

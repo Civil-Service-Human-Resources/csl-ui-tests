@@ -19,7 +19,7 @@ public class HeaderFooterTests extends BaseTest{
     }
 
     @Test(groups = {"navigation"})
-    public void govUkink() {
+    public void govUkLink() {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.goTo();
         loginPage.loginWithCredentials(users.getNonAdminUsername(), users.getNonAdminUserPassword());
@@ -29,7 +29,7 @@ public class HeaderFooterTests extends BaseTest{
     }
 
     @Test(groups = {"navigation"})
-    public void cslHeaderink() {
+    public void cslHeaderLink() {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.goTo();
         loginPage.loginWithCredentials(users.getNonAdminUsername(), users.getNonAdminUserPassword());
